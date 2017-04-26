@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <title>Log-in</title>
+  
+  <script src="./signUpJs.js"></script>
+  <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+  <link rel="stylesheet" href="./css/signInStyle.css">
+
+</head>
+<body>
+
+<div class="login-card">
+	<h1>Poole Piano Studio</h1>
+	<h4>log-in</h4>
+	<form>
+	    <input type="text" name="user" placeholder="Username" id="user">
+	    <input type="password" name="pass" placeholder="Password" id="pass">
+	    <input type="submit" name="login" class="login login-submit" value="login" onsubmit="checkCredentials()" onclick="checkCredentials()">
+    </form>
+    
+  <div class="login-help">
+    <a href="./signUp.html">Create a New Student Account</a>
+  </div>
+
+</div>
+
+</body>
+</html>

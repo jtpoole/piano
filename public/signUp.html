@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  	<title>Account Creation</title>
+  
+  	<link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+
+    <link rel="stylesheet" href="./css/signInStyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+	<script src="./js/signUpJs.js"></script>
+
+</head>
+<body>
+
+<div ng-app="userCheck" ng-controller="userCtrl">
+
+	<div class="login-card">
+		<h1>Account Creation</h1>
+		<h4>enter your account details</h4>
+		
+		<form>
+			<input type="text" id="fn" placeholder="First Name">
+			<input type="text" id="ln" placeholder="Last Name">
+			<input type="text" id="email" ng-model="confEmail" ng-change="isEmailValid()" placeholder="Email">
+			<input type="text" id="newUser1" ng-model="newUser" ng-change="isUserAvailable()" placeholder="Username">
+			<input type="Password" id="newPass" ng-model="newPass" ng-change="isPassValid()" placeholder="Password">
+			<input type="Password" id="confPass" ng-model="confPass" ng-change="isPassValid()" placeholder="Repeat Password">
+			<input type="submit" name="login" class="login login-submit" value="Create" onsubmit="createAccount()" onclick="createAccount()">
+		</form>
+		<div class="validPass" id="output1"></div>
+		<div class="validPass" id="output2"></div>
+		<div class="validPass" id="output3"></div>
+		<div class="validPass" id="output4"></div>
+	</div>
+		
+	
+</div>
+
+
+<br>
+
+
+
+</body>
+</html>
