@@ -1,0 +1,5 @@
+{
+    "devServer": {
+        "url": "mongodb://pianoAdmin:abc123@localhost:27017/test"
+    }
+}

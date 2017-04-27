@@ -13,20 +13,20 @@ var app = angular.module('userCheck', []);
 		$scope.isUserAvailable = function(){
 
 			//check database to see if user is available
-			var test = document.getElementById("newUser1").value;
+			var test = document.getElementById("username").value;
 
 			if(test != "big hit club"){
-				document.getElementById("newUser1").style = "border-right: 8px solid #00FF7F;";
+				document.getElementById("username").style = "border-right: 8px solid #00FF7F;";
 				document.getElementById("output1").innerHTML="";
 				userReady = true;
 			}
 			else{
-				document.getElementById("newUser1").style = "border-right: 8px solid #CD5C5C;";
+				document.getElementById("username").style = "border-right: 8px solid #CD5C5C;";
 				document.getElementById("output1").innerHTML="- Username Taken";
 				userReady = false;
 			}
 			if(test == ""){
-  				document.getElementById("newUser1").style = "border: 1px solid #d9d9d9; border-top: 1px solid #c0c0c0;";
+  				document.getElementById("username").style = "border: 1px solid #d9d9d9; border-top: 1px solid #c0c0c0;";
   				document.getElementById("output1").innerHTML="";
   				userReady = false;
 			}
@@ -72,17 +72,17 @@ var app = angular.module('userCheck', []);
 			}
 			
 
-			let confirm = document.getElementById("confPass").value;
+			let confirm = document.getElementById("pwd").value;
 
 			if(confirm == testPass)
 			{
 				document.getElementById("output4").innerHTML="- Passwords Match";
-				document.getElementById("confPass").style = "border-right: 8px solid #00FF7F;";
+				document.getElementById("pwd").style = "border-right: 8px solid #00FF7F;";
 			}
 			else
 			{
 				document.getElementById("output4").innerHTML="- Passwords Do Not Match";
-				document.getElementById("confPass").style = "border-right: 8px solid #CD5C5C;";
+				document.getElementById("pwd").style = "border-right: 8px solid #CD5C5C;";
 				passReady = false;	
 			}
 			if(testPass == ""){
@@ -91,7 +91,7 @@ var app = angular.module('userCheck', []);
 				passReady = false;	
 			}
 			if(confirm == ""){
-  				document.getElementById("confPass").style = "border: 1px solid #d9d9d9; border-top: 1px solid #c0c0c0;";
+  				document.getElementById("pwd").style = "border: 1px solid #d9d9d9; border-top: 1px solid #c0c0c0;";
   				document.getElementById("output4").innerHTML="";	
   				passReady = false;	
 			}
@@ -108,9 +108,10 @@ var app = angular.module('userCheck', []);
 
 
 function submitUser() {
-	username = document.getElementById("newUser1").value;
-	pwd = document.getElementById("confPass").value;
-	var user = {"username":username, "pwd":pwd};
+	username = document.getElementById("username").value;
+	pwd = document.getElementById("pwd").value;
+	fullName = document.getElementById("fn").value +"."+ document.getElementById("ln").value;
+	var user = {"username":username, "pwd":pwd, "fullName":fullName};
 	$.ajax({
 		method:"post",
 		url:"signupServer",
@@ -122,12 +123,5 @@ function submitUser() {
 		else
 			$("#result").html("Username already taken. Please choose another.");
 	})
-}
-
-function checkCredentials(){
-	let accName = document.getElementById("user").value;
-	let accPass = document.getElementById("pass").value;
-	//access database to check for username and associated pass
-	
 
 }

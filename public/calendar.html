@@ -6,16 +6,20 @@
 	<link href='//fonts.googleapis.com/css?family=IM Fell DW Pica' rel='stylesheet'>
 	<link rel="stylesheet" href="./css/calendarStyle.css">
 	<link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 
 	<div class="calendar-card">
 		<h1>Poole Piano Studio Schedule</h1>
 		 	<div class="calendar-help">
-	    		<a href="./main.html">Schedule a Lesson</a>
+	    		<a href="./main.html">View Scheduled Lessons</a>
 	 		</div>
-
-	 		<div class="lessonsListDiv"></div>
+	 		<br>
+	 		<input id="studName" type="text" placeholder="Who is this lesson being scheduled for?"></input>
+	 		<h2>DATE -- TIME -- AVAILIBILITY</h2>
+	 		<div id="lessonsListDiv"></div>
+	 		
 
 
 
@@ -46,10 +50,13 @@
 				<input type="text" placeholder="Available Lesson Time 1:00 PM Wednesday" readonly id="1Wed"></input>
 				</form>
 				-->
+			<div class="calendar-help">
+	    		<a href="./signUp.html">Create an account</a>
+	 		</div>
 	</div>
 </body>
-<script type="text/javascript" src="./js/scheduleJs.js"></script>
+<script type="text/javascript" src="./js/scheduleScript.js"></script>
 <script type="text/javascript">
-createLessons();
+createSchedule();
 </script>
 </html>

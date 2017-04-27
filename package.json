@@ -1,0 +1,33 @@
+{
+  "name": "piano2017",
+  "version": "1.0.0",
+  "description": "Piano Site",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.1",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.2",
+    "handlebar": "^1.0.0",
+    "handlebars": "^4.0.6",
+    "mongodb": "^2.2.25",
+    "node": "0.0.0",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtpoole/piano.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtpoole/piano/issues"
+  },
+  "homepage": "https://github.com/jtpoole/piano#readme"
+}

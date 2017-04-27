@@ -3,27 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home</title>
-	<link rel="stylesheet" href="./css/mainStyle.css">
+	<link href='//fonts.googleapis.com/css?family=IM Fell DW Pica' rel='stylesheet'>
+	<link rel="stylesheet" href="./css/calendarStyle.css">
 	<link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 <body>
 
-<div class="schedule-card">
-	<h1>Poole Piano Studio</h1>
-	<h4>schedule a lesson</h4>
-	<form>
-	    <input type="text" name="user" placeholder="Username" id="user">
-	    <input type="datetime-local" name="newDate" id="date">
-	    <input type="submit" name="schedule" class="schedule schedule-submit" value="Schedule" onsubmit="checkScheduling()" onclick="checkSchduling()">
-    </form>
-    
-  <div class="schedule-help">
-    <a href="./calendar.html">View Lesson Calendar</a>
-  </div>
+<div class="calendar-card">
+	<h1>Reserved Lessons</h1>
+	 <div class="calendar-help">
+    	<a href="./calendar.html">View Lesson Calendar</a>
+  	</div>
+	
+	<h2>DATE -- TIME -- STUDENT</h2>
+ 	<div id="reservedLessons"></div>
 
+
+
+
+
+
+  <div class="calendar-help">
+    <a href="./signIn.html">log in to schedule lessons</a>
+  </div>
+  <button onclick="clearReserved()">Clear Lessons</button>
 </div>
 
 
 </body>
+<script type="text/javascript" src="./js/scheduleScript.js"></script>
+<script type="text/javascript">
+createReserved();
+</script>
 </html>
